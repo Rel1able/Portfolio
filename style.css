@@ -1,0 +1,114 @@
+:root{
+    --main-color: rgb(133, 199, 76);
+    --secondary-color: rgb(32, 32, 32);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100vh;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(185, 254, 107);
+}
+
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    place-items: center;
+    gap: 2rem;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid var(--main-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+    background-color: var(--main-color);
+    box-shadow: 2px 2px 2px rgb(132, 242, 42);
+    font-size: 1.2rem;
+}
+
+.tools-and-code{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.code-and-preview{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-img{
+    width: 25rem;
+    object-fit: contain;
+    border-radius: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.project-img:hover{
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+.icon{
+    width: 3rem;
+    object-fit: contain;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+}
+
+.title{
+    text-align: center;
+    font-weight: bold;
+}
+
+.navbar{
+    display: flex;
+    gap: 2rem;
+}
+
+
+.tools-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 1rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 2px rgb(206, 206, 206);
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 30%;
+    margin: auto;
+}
+
+
+.footer{
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    margin-top: 3rem;
+    color: white;
+    text-align: center;
+}
