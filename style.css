@@ -1,5 +1,5 @@
 :root{
-    --main-color: rgb(133, 199, 76);
+    --main-color: rgb(154, 234, 85);
     --secondary-color: rgb(32, 32, 32);
 }
 
@@ -11,17 +11,21 @@ body{
     justify-content: space-between;
     margin: 0px;
     padding: 0px;
-    background-color: rgb(185, 254, 107);
+    background-color: rgb(214, 249, 133);
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .projects-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-    place-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
 }
 
 .project{
+    height: 30rem;
+    width: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +36,11 @@ body{
     color: white;
     background-color: var(--main-color);
     box-shadow: 2px 2px 2px rgb(132, 242, 42);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+}
+
+.project-desc{
+    color: rgb(255, 255, 255);
 }
 
 .tools-and-code{
@@ -82,11 +90,28 @@ a{
 .title{
     text-align: center;
     font-weight: bold;
+    color: var(--secondary-color);
+}
+
+
+.title2{
+    text-align: center;
+    font-weight: bold;
+    color: white;
 }
 
 .navbar{
     display: flex;
     gap: 2rem;
+    font-size: 1.5rem;
+}
+
+.header{
+    display: flex;
+}
+
+.text-about-me{
+    font-size: 1.5rem;
 }
 
 
@@ -96,7 +121,7 @@ a{
     align-items: center;
     list-style-type: none;
     gap: 1rem;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(229, 249, 211);
     box-shadow: 2px 2px 2px rgb(206, 206, 206);
     padding: 1rem;
     border-radius: 2rem;
@@ -111,4 +136,65 @@ a{
     margin-top: 3rem;
     color: white;
     text-align: center;
+}
+
+
+@media (min-width: 320px) and (max-width: 480px){
+    .header{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-about-me, .navbar{
+        font-size: 0.9rem;
+    }
+
+    .project-img{
+        width: 15rem;
+    }
+
+    .project{
+        width: 16rem;
+    }
+
+    .footer{
+        font-size: 0.4rem;
+    }
+
+    .tools-list{
+        width: 85%;
+    }
+    .icon{
+        width: 2.2rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px){
+    .header{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-about-me, .navbar{
+        font-size: 1.1rem;
+    }
+
+    .project-img{
+        width: 20rem;
+    }
+
+    .project{
+        width: 21rem;
+    }
+
+    .footer{
+        font-size: 0.6rem;
+    }
+
+    .tools-list{
+        width: 75%;
+    }
+    .icon{
+        width: 2.7rem;
+    }
 }
